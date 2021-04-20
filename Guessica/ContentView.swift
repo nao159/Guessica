@@ -9,8 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        RadialGradient(gradient: Gradient(colors: [.white, .pink, .yellow, .blue]), center: .top, startRadius: 10, endRadius: 450).edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
     }
 }
 
