@@ -18,9 +18,13 @@ struct ContentView: View {
     
     var body: some View {
         ZStack {
-            AngularGradient(gradient: Gradient(colors: [.pink, .white, .black, .white, .pink, .white, .black, .white, .pink]), center: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/).edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+            AngularGradient(gradient: Gradient(colors: [.pink, .yellow, .blue, .yellow, .pink, .white, .blue, .white, .pink]), center: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/).edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
             VStack {
                 VStack (spacing: 20){
+                    HStack {
+                        Spacer()
+                        Text("Score: \(totalScore)").padding()
+                    }
                     Text("Tap the flag of")
                     Text(countries[correctAnswer])
                         .fontWeight(.black)
@@ -42,7 +46,7 @@ struct ContentView: View {
                 Spacer()
             }
             .alert(isPresented: $showingScore, content: {
-                Alert(title: Text("Result label"), message: Text("\(scoreTitle)"), dismissButton: .default(Text("ok")) {
+                Alert(title: Text("\(scoreTitle)"), message: Text("Your current score is \(totalScore)"), dismissButton: .default(Text("ok")) {
                     askQuestion()
                 })
             })
@@ -55,7 +59,7 @@ struct ContentView: View {
             totalScore += 1
             scoreTitle = "Correct"
         } else {
-            scoreTitle = "Wrong"
+            scoreTitle = "Wrong! That is \(countries[number])"
         }
     }
     
