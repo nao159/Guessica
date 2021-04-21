@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF72707E26301F48000742E9 /* countryImageLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF72707D26301F48000742E9 /* countryImageLabel.swift */; };
 		AFE9503D262EE87A0074DECC /* GuessicaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE9503C262EE87A0074DECC /* GuessicaApp.swift */; };
 		AFE9503F262EE87A0074DECC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE9503E262EE87A0074DECC /* ContentView.swift */; };
 		AFE95041262EE87D0074DECC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFE95040262EE87D0074DECC /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF72707D26301F48000742E9 /* countryImageLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = countryImageLabel.swift; sourceTree = "<group>"; };
 		AFE95039262EE87A0074DECC /* Guessica.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Guessica.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFE9503C262EE87A0074DECC /* GuessicaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessicaApp.swift; sourceTree = "<group>"; };
 		AFE9503E262EE87A0074DECC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 			children = (
 				AFE9503C262EE87A0074DECC /* GuessicaApp.swift */,
 				AFE9503E262EE87A0074DECC /* ContentView.swift */,
+				AF72707D26301F48000742E9 /* countryImageLabel.swift */,
 				AFE95040262EE87D0074DECC /* Assets.xcassets */,
 				AFE95045262EE87D0074DECC /* Info.plist */,
 				AFE95042262EE87D0074DECC /* Preview Content */,
@@ -140,6 +143,7 @@
 			files = (
 				AFE9503F262EE87A0074DECC /* ContentView.swift in Sources */,
 				AFE9503D262EE87A0074DECC /* GuessicaApp.swift in Sources */,
+				AF72707E26301F48000742E9 /* countryImageLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
