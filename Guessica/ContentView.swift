@@ -10,11 +10,12 @@ import SwiftUI
 struct ContentView: View {
     
     @State private var countries = ["Estonia", "France", "Germany", "Ireland", "Italy", "Monaco", "Nigeria", "Poland", "Russia", "Spain", "UK", "US"].shuffled()
-    @State private var correctAnswer = Int.random(in: 0...3)
+    @State private var correctAnswer = Int.random(in: 0...2)
     
     @State private var showingScore = false
     @State private var scoreTitle = ""
     @State private var totalScore = 0
+    @State private var rotationAmount = 360
     
     var body: some View {
         ZStack {
@@ -34,10 +35,16 @@ struct ContentView: View {
                 
                 ForEach(0..<3) { number in
                     Button(action: {
+                        withAnimation {
                         flagPressed(number)
                         showingScore.toggle()
+                        }
                     }, label: {
                         countryImageLabel(image: countries[number])
+                            .rotation3DEffect(
+                                .degrees(Double(rotationAmount)),
+                                axis: /*@START_MENU_TOKEN@*/(x: 0.0, y: 1.0, z: 0.0)/*@END_MENU_TOKEN@*/)
+                            
                     })
                     .padding()
                 }
@@ -56,6 +63,7 @@ struct ContentView: View {
         if number == correctAnswer {
             totalScore += 1
             scoreTitle = "Correct"
+            rotationAmount += 360
         } else {
             scoreTitle = "Wrong! That is \(countries[number])"
         }
